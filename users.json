@@ -4,7 +4,7 @@
             "nome" : "Lucas Kendy",
             "email" : "lucaskendy2002@gmail.com",
             "senha" : "123123",
-            "setor" : "desempregado",
+            "setor" : "desenvolvimento",
             "cargo" : "desempregado"
         },
         {
@@ -13,7 +13,22 @@
             "senha" : "123123",
             "setor" : "desempregado",
             "cargo" : "desempregado"
+        },
+        {
+            "nome" : "Daniele ",
+            "email" : "daniele@gmail.com",
+            "senha" : "123123",
+            "setor" : "desempregado",
+            "cargo" : "desempregado"
+        },
+        {
+            "nome" : "Duda ",
+            "email" : "duda@gmail.com",
+            "senha" : "123123",
+            "setor" : "desempregado",
+            "cargo" : "desempregado"
         }
+
     ]
     
 }
