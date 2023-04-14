@@ -1,5 +1,12 @@
 var inputEmail = document.getElementById('idemail')
 var inputSenha = document.getElementById('idpass')
+var botao = document.getElementById('butao')
+
+if(botao){
+    botao.addEventListener('click',() => {
+        verificarUsers()
+    })
+}
 
 function verificarUsers(){
     var requestURL = 'https://raw.githubusercontent.com/LucasKendy1/TIME_CHECK/main/users.json'
@@ -19,6 +26,8 @@ function verificarUsers(){
     }
 }
 
+
+var nome
 function verificarCredenciais(objeto){
     var users = objeto['usuarios']
     for(var i=0; i<users.length; i++){
@@ -27,7 +36,10 @@ function verificarCredenciais(objeto){
             console.log('email correspondente')
             if(inputSenha.value==users[i].senha){
                 console.log('senha correspondente')
+                // nome = String(users[i].nome)
+                nome = String(users[i].nome)
                 window.location.href='carregamento.html'
+                
             }
             else{
                 console.log('senha invalida')
@@ -38,3 +50,4 @@ function verificarCredenciais(objeto){
         }
     }
 }
+export default nome
