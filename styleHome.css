@@ -24,6 +24,18 @@ header{
     background-color: #f25044;
     border-bottom-left-radius: 16px;
     border-bottom-right-radius: 16px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+h2{
+    font-size: 10pt;
+    font-weight: 300;
+}
+h1{
+    font-size: 22pt;
+    font-weight: 400;
 }
 main{
     background-color: #30526a;
