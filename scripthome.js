@@ -18,12 +18,12 @@ main.addEventListener('click', resetAbas)
 nomeDisplay.innerHTML=nome
 
 function abrirHistorico(){
-    if(containerH1.style.height=='90vh'){
+    if(containerH1.style.height=='85vh'){
         containerH1.style.height='65px'
         containerSlide.style.transform='rotate(0deg)'
     }
     else{
-        containerH1.style.height='90vh'
+        containerH1.style.height='85vh'
         containerSlide.style.transform='rotate(180deg)'
     }
 }
@@ -41,7 +41,7 @@ function abrirMenu(){
 function abrirHeader(){
     header.style.transition='1s'
     if(header.style.height=='90vh'){
-        header.style.height='20vh'
+        header.style.height='10vh'
         header.style.backgroundColor='#f25044'
         containerH1.style.display='block'
         containerSlide.style.display='block'
@@ -56,8 +56,3 @@ function abrirHeader(){
     }
 }
 
-function resetAbas(){
-    containerH1.style.height='65px'
-    containerSlide.style.transform='rotate(0deg)'
-    header.style.height='20vh'
-}
