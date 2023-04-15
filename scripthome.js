@@ -8,6 +8,9 @@ var containerMenu = document.getElementById('idmenu')
 var containerMain = document.getElementById('idmain')
 var header = document.querySelector('header')
 var main = document.querySelector('main')
+var h2 = document.querySelector('h2')
+var h1 = document.querySelector('h1')
+var fotoPerfil = document.getElementById('idfoto')
 
 containerSlide.addEventListener('click',abrirHistorico)
 containerHistorico.addEventListener('click',abrirHistorico)
@@ -41,11 +44,20 @@ function abrirMenu(){
 function abrirHeader(){
     header.style.transition='1s'
     if(header.style.height=='90vh'){
-        header.style.height='10vh'
+        header.style.height='10.5vh'
         header.style.backgroundColor='#f25044'
         containerH1.style.display='block'
         containerSlide.style.display='block'
         main.style.display='block'
+        h2.innerHTML='Bem-vindo de volta!'
+        h2.style.marginTop='10px'
+        h1.style.marginTop='0px'
+        header.style.padding='20px'
+        fotoPerfil.style.width='100px'
+        fotoPerfil.style.height='100px'
+        h1.style.marginTop='10px'
+        h1.style.transform='translateX(0px)'
+        h1.innerHTML='Lucas'
     }
     else{
         header.style.height='90vh'
@@ -53,6 +65,13 @@ function abrirHeader(){
         containerH1.style.display='none'
         containerSlide.style.display='none'
         main.style.display='none'
+        h2.innerHTML='Ola!'
+        h1.innerHTML='Lucas'
+        h1.style.marginTop='50px'
+        h1.style.transform='translateX(-40px)'
+        header.style.padding='45px'
+        fotoPerfil.style.width='200px'
+        fotoPerfil.style.height='200px'
     }
 }
 

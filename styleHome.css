@@ -28,6 +28,7 @@ header{
     display: flex;
     justify-content: space-between;
     padding: 20px;
+    cursor: pointer;
 }
 h2{
     font-size: 10pt;
@@ -46,7 +47,7 @@ footer{
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 60px; 
+    height: 60px;
 }
 #sec1{
     width: 80%;
@@ -126,4 +127,8 @@ a{
     width: 80%;
     height: 100%;
     background-color: white;
+}
+
+#idfoto{
+    transition: 1s ease;
 }
