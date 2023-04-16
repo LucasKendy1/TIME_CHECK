@@ -9,11 +9,24 @@ body,html{
     height: 100%;
     font-family: 'Poppins', sans-serif;
 }
+/* body{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+} */
 #botaoConfirmar{
-    width: 300px;
-    height: 30px;
-    background-color: #e84e57;
+    width: 245px;
+    height: 64px;
+    background-color: #F25044;
     cursor: pointer;
+    border-radius: 64px;
+    border: none;
+    font-size: 12pt;
+    font-family: 'Poppins', 'sans-serif';
+    font-weight: 700;
+    color: #8f2f28;
+    margin: auto;
 }
 footer{
     background-color: #f6f6f6;
@@ -36,4 +49,35 @@ span.material-symbols-outlined{
 a{
     text-decoration: none;
     color: white ;
+}
+h1{
+    text-align: center;
+    color: white;
+    font-weight: 400;
+}
+main{
+    color: white;
+    text-align: center;
+    
+}
+p{
+    font-size: 17pt;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+#idrelogio{
+    font-size: 30pt;
+    border: 5px solid white;
+    border-radius: 10px;
+    width: 190px;
+    margin: auto;
+    padding: 10px;
+    margin-top: 50px;
+}
+#idvoltar{
+    position: absolute;
+    left: 40px;
+}
+header{
+    padding-top: 50px;
 }

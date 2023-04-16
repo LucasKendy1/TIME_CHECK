@@ -36,8 +36,9 @@ function verificarCredenciais(objeto){
             console.log('email correspondente')
             if(inputSenha.value==users[i].senha){
                 console.log('senha correspondente')
-                // nome = String(users[i].nome)
                 nome = String(users[i].nome)
+                var dados = JSON.stringify((nome))
+                sessionStorage.setItem('chave',dados)
                 window.location.href='carregamento.html'
                 
             }
@@ -50,4 +51,4 @@ function verificarCredenciais(objeto){
         }
     }
 }
-export default nome
+

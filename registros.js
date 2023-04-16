@@ -1,13 +1,21 @@
 var relogioContainer = document.getElementById("idrelogio")
-
-const getHours = () => {
-  const date = new Date()
-  const hours = date.getHours()
-  const minutes = date.getMinutes()
-  const seconds = date.getSeconds()
-  const hour = hours < 10 ? `0${hours}` : hours
-  const minute = minutes < 10 ? `0${minutes}` : minutes
-  const second = seconds < 10 ? `0${seconds}` : seconds
+var h1 = document.querySelector('h1')
+console.log(h1)
+var date
+var hours
+var minutes
+var seconds
+var hour
+var minute
+var second
+var getHours = () => {
+  date = new Date()
+  hours = date.getHours()
+  minutes = date.getMinutes()
+  seconds = date.getSeconds()
+  hour = hours < 10 ? `0${hours}` : hours
+  minute = minutes < 10 ? `0${minutes}` : minutes
+  second = seconds < 10 ? `0${seconds}` : seconds
   relogioContainer.innerHTML = `${hour}:${minute}:${second}`
 }
 
@@ -15,44 +23,17 @@ setInterval(() => {
   getHours()
 }, 1000)
 
-class ClickAndHold{
-  /**
-   * 
-   * @param {EventTarget} target 
-   * @param {Function} callback 
-   */
-  constructor(target,callback){
-    this.target = target
-    this.callback = callback
-    this.isHeld = false
-    this.activeHoldTimeoutId = null
-    ["mousedown","touchstart"].forEach(type => {
-      this.target.addEventListener(type, this._onHoldStart.bind(this))
-    });
-    ["mouseup","mouseleave","mouseout","touchend","touchcancel"].forEach(type => {
-      this.target.addEventListener(type, this._onHoldEnd.bind(this))
-    });
-  }
-  _onHoldStart(){
-    this.isHeld = true
 
-    this.activeHoldTimeoutId = setTimeout(()=>{
-      if(this.isHeld){
-        this.callback()
-      }
-    },1000)
-  }
-  _onHoldEnd(){
-    this.isHeld = false
+const botao = document.getElementById('botaoConfirmar')
 
-    clearTimeout(this.activeHoldTimeoutId)
+botao.addEventListener('click',registrar)
+
+function registrar(){
+
+  alert(`Registrado com sucesso! ${hour}:${minute}:${second}`)
+  var procuraRegistro = h1.indexOf('entrada')
+  if(procuraRegistro!=-1){
+    console.log(`Entrada - ${hour}:${minute}:${second}` )
   }
+  
 }
-
-const mybutton = document.getElementById('botaoConfirmar')
-
-new ClickAndHold(mybutton, ()=>{
-  window.alert('registrado!')
-})
-
-
