@@ -27,6 +27,14 @@
             "senha" : "123123",
             "setor" : "desempregado",
             "cargo" : "desempregado"
+        },
+        {
+            "nome" : "Clara Gostosa",
+            "email" : "cl2tsu@gmail.com",
+            "senha" : "123123",
+            "setor" : "Administrativo",
+            "cargo" : "CEO",
+            "empresa" : "Samsung"
         }
 
     ]
