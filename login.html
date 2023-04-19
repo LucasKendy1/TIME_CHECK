@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Time Check</title>
+    <link rel="stylesheet" href="styleLogin.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,0,200" />
 </head>
 <body>
     <header>
@@ -13,17 +15,51 @@
         <p>Entre para continuar</p>
     </header>
     <main>
-        <input type="email" name="email" id="idemail">
+        <div id="containerEmail">
+            <div id="idicon">
+                <label for="email">
+                    <span class="material-symbols-outlined">
+                        person
+                    </span>
+                </label>
+            </div>
+            <div id="idinput">
+                <input type="email" name="email" id="idemail">
+            </div>
+            
+        </div>
+
         <br>
-        <input type="password" name="pass" id="idpass">
+
+        <div id="containerSenha">
+            <div id="idicon">
+                <label for="pass">
+                    <span class="material-symbols-outlined">
+                        lock
+                    </span>
+                </label>
+            </div>
+            <div id="idinput">
+                <input type="password" name="pass" id="idpass">
+            </div>
+        </div>
+
         <br>
-        <input type="checkbox" name="lembrar" id="idlembrar">
-        <label for="lembrar">Lembrar das minhas credenciais</label>
+
+        <div id="containerLembrar">
+            <input type="checkbox" name="lembrar" id="idlembrar">
+            <label for="lembrar">Lembrar as minhas credenciais</label>
+        </div>
+
         <br>
+
         <input type="button" value="Login" id="butao">
         <br>
         <a href="./">Esqueceu a senha?</a>
-        <img src="imagens/TIME_Check_white-removebg-preview.png" alt="">
+
+        <footer>
+            <img src="imagens/TIME_Check_white-removebg-preview.png" alt="">
+        </footer>
     </main>
     
     <script src="script.js" type="module"></script>
