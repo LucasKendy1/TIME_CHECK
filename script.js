@@ -36,8 +36,10 @@ function verificarCredenciais(objeto){
             console.log('email correspondente')
             if(inputSenha.value==users[i].senha){
                 console.log('senha correspondente')
-                nome = String(users[i].nome)
-                var dados = JSON.stringify((nome))
+                nome = String(users[i])
+                var dados = JSON.stringify((users[i]))
+                console.log(dados)
+                console.log(typeof dados)
                 sessionStorage.setItem('chave',dados)
                 window.location.href='carregamento.html'
                 

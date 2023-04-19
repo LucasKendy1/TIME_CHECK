@@ -13,6 +13,7 @@ var h1 = document.querySelector('h1')
 var fotoPerfil = document.getElementById('idfoto')
 
 console.log(dadosArquivados)
+console.log(typeof dadosArquivados)
 
 containerSlide.addEventListener('click',abrirHistorico)
 containerHistorico.addEventListener('click',abrirHistorico)
@@ -20,7 +21,10 @@ containerMenu.addEventListener('click',abrirMenu)
 header.addEventListener('click',abrirHeader)
 
 nomeDisplay.innerHTML=nome
-h1.innerHTML=dadosArquivados
+h1.innerHTML=dadosArquivados.nome
+console.log(dadosArquivados.cargo)
+console.log(dadosArquivados.setor)
+console.log(dadosArquivados.email)
 
 function abrirHistorico(){
     if(containerH1.style.height=='85vh'){
@@ -45,7 +49,7 @@ function abrirMenu(){
 
 function abrirHeader(){
     header.style.transition='1s'
-    if(header.style.height=='90vh'){
+    if(header.style.height=='90vh'){                //se ela tiver aberta = fecha
         header.style.height='10.5vh'
         header.style.backgroundColor='#f25044'
         containerH1.style.display='block'
@@ -59,9 +63,10 @@ function abrirHeader(){
         fotoPerfil.style.height='100px'
         h1.style.marginTop='10px'
         h1.style.transform='translateX(0px)'
+        esconderSettings()
     }
-    else{
-        header.style.height='90vh'
+    else{                                           //se ela tiver fechada = abre
+        header.style.height='87vh'
         header.style.backgroundColor='#233c4d'
         containerH1.style.display='none'
         containerSlide.style.display='none'
@@ -72,6 +77,51 @@ function abrirHeader(){
         header.style.padding='45px'
         fotoPerfil.style.width='200px'
         fotoPerfil.style.height='200px'
+        carregarSettings()
     }
 }
 
+var section
+function carregarSettings(){
+    section = document.createElement('section')
+    section.setAttribute('id','sectionDados')
+    // section.innerHTML=dadosArquivados.email
+    // section.innerHTML+=dadosArquivados.setor
+    // section.innerHTML+=dadosArquivados.cargo
+    let h3email= document.createElement('h3')
+    let h3setor= document.createElement('h3')
+    let h3cargo= document.createElement('h3')
+    h3email.innerHTML="Email: " + dadosArquivados.email
+    h3setor.innerHTML="Setor: " + dadosArquivados.setor
+    h3cargo.innerHTML="Cargo: " + dadosArquivados.cargo
+    header.appendChild(section)
+    section.appendChild(h3email)
+    section.appendChild(h3setor)
+    section.appendChild(h3cargo)
+    section.style.position='absolute'
+    section.style.width='350px'
+    section.style.height='200px'
+    section.style.marginTop='50%'
+    var botaoSair= document.createElement('input')
+    botaoSair.setAttribute('type', 'button')
+    botaoSair.setAttribute('value','Sair da conta')
+    botaoSair.addEventListener('click',sairConta)
+    header.appendChild(botaoSair)
+    botaoSair.style.width='200px'
+    botaoSair.style.height='40px'
+    botaoSair.style.border='none'
+    botaoSair.style.borderRadius='40px'
+    botaoSair.style.backgroundColor='#f25044'
+    botaoSair.style.color='white'
+    botaoSair.style.position='absolute'
+    botaoSair.style.marginTop='70%'
+    botaoSair.style.cursor='pointer'
+}
+
+function esconderSettings(){
+    section.style.display='none'
+}
+
+function sairConta(){
+    window.location.href='./login.html'
+}
