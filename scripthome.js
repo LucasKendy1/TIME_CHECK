@@ -11,10 +11,19 @@ var main = document.querySelector('main')
 var h2 = document.querySelector('h2')
 var h1 = document.querySelector('h1')
 var fotoPerfil = document.getElementById('idfoto')
+var dadosHistorico = JSON.parse(sessionStorage.getItem('chaveHistorico'))
+var body = document.querySelector('body')
 
+//Informações pessoais recebidas do login
 console.log(dadosArquivados)
-console.log(typeof dadosArquivados)
 
+//Dados de data e hora recebidas das telas de registro
+console.log(dadosHistorico)
+
+var HistoricoCompleto 
+
+
+body.addEventListener('onload',pushHistorico)
 containerSlide.addEventListener('click',abrirHistorico)
 containerHistorico.addEventListener('click',abrirHistorico)
 containerMenu.addEventListener('click',abrirMenu)
@@ -25,6 +34,11 @@ h1.innerHTML=dadosArquivados.nome
 console.log(dadosArquivados.cargo)
 console.log(dadosArquivados.setor)
 console.log(dadosArquivados.email)
+
+function pushHistorico(){
+    HistoricoCompleto.push(dadosHistorico)
+    console.log(HistoricoCompleto)
+} 
 
 function abrirHistorico(){
     if(containerH1.style.height=='85vh'){
