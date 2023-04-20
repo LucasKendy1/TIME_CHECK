@@ -1,6 +1,5 @@
 var relogioContainer = document.getElementById("idrelogio")
-var h1 = document.querySelector('h1')
-console.log(h1)
+var h1 = document.getElementById('titulo')
 var date
 var hours
 var minutes
@@ -31,9 +30,19 @@ botao.addEventListener('click',registrar)
 function registrar(){
 
   alert(`Registrado com sucesso! ${hour}:${minute}:${second}`)
-  var procuraRegistro = h1.indexOf('entrada')
-  if(procuraRegistro!=-1){
-    console.log(`Entrada - ${hour}:${minute}:${second}` )
+  
+  
+  if(h1.textContent=="Entrada"){
+    console.log(`Entrada - ${hour}:${minute}:${second}`) 
+  }
+  if(h1.textContent=="Pausa"){
+    console.log(`Pausa - ${hour}:${minute}:${second}`) 
+  }
+  if(h1.textContent=="Volta"){
+    console.log(`Volta - ${hour}:${minute}:${second}`) 
+  }
+  if(h1.textContent=="Saida"){
+    console.log(`Saida - ${hour}:${minute}:${second}`) 
   }
   
 }

@@ -114,7 +114,7 @@ function carregarSettings(){
     botaoSair.style.backgroundColor='#f25044'
     botaoSair.style.color='white'
     botaoSair.style.position='absolute'
-    botaoSair.style.marginTop='70%'
+    botaoSair.style.marginTop='80%'
     botaoSair.style.cursor='pointer'
 }
 
