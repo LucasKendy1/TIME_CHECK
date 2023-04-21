@@ -21,7 +21,13 @@ console.log(dadosArquivados)
 console.log(dadosHistorico)
 
 var HistoricoCompleto 
+var requestURL = "https://lucaskendy1.github.io/TIME_CHECK/historico.json"
+var request = new XMLHttpRequest()
+request.open('POST',requestURL,true)
+request.send()
+request.onreadystatechange = function(){
 
+}
 
 body.addEventListener('onload',pushHistorico)
 containerSlide.addEventListener('click',abrirHistorico)
@@ -35,10 +41,7 @@ console.log(dadosArquivados.cargo)
 console.log(dadosArquivados.setor)
 console.log(dadosArquivados.email)
 
-function pushHistorico(){
-    HistoricoCompleto.push(dadosHistorico)
-    console.log(HistoricoCompleto)
-} 
+
 
 function abrirHistorico(){
     if(containerH1.style.height=='85vh'){
