@@ -84,6 +84,7 @@ div#direita{
 }
 a{
     text-decoration: none;
+    color: black;
 }
 #direita > span, #esquerda > span{
     color: #182a36;

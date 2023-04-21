@@ -21,15 +21,15 @@ console.log(dadosArquivados)
 console.log(dadosHistorico)
 
 var HistoricoCompleto 
-var requestURL = "https://lucaskendy1.github.io/TIME_CHECK/historico.json"
-var request = new XMLHttpRequest()
-request.open('POST',requestURL,true)
-request.send()
-request.onreadystatechange = function(){
+// var requestURL = "https://lucaskendy1.github.io/TIME_CHECK/historico.json"
+// var request = new XMLHttpRequest()
+// request.open('POST',requestURL,true)
+// request.send()
+// request.onreadystatechange = function(){
 
-}
+// }
 
-body.addEventListener('onload',pushHistorico)
+// body.addEventListener('onload',pushHistorico)
 containerSlide.addEventListener('click',abrirHistorico)
 containerHistorico.addEventListener('click',abrirHistorico)
 containerMenu.addEventListener('click',abrirMenu)
@@ -44,13 +44,14 @@ console.log(dadosArquivados.email)
 
 
 function abrirHistorico(){
-    if(containerH1.style.height=='85vh'){
+    if(containerH1.style.height=='85vh'){//se o historico tiver aberto, fecha
         containerH1.style.height='65px'
         containerSlide.style.transform='rotate(0deg)'
     }
-    else{
+    else{                                //se o historico tiver fechado, abre
         containerH1.style.height='85vh'
         containerSlide.style.transform='rotate(180deg)'
+        
     }
 }
 
