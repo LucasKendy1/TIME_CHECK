@@ -58,6 +58,7 @@ function registrar(){
       Hdata: pickData(),
       Hhora: `Entrada - ${hour}:${minute}:${second}`
     }
+    requestPOST()
   }
   if(h1.textContent=="Pausa"){
     console.log(`Pausa - ${hour}:${minute}:${second}`) 
@@ -65,6 +66,7 @@ function registrar(){
       Hdata: pickData(),
       Hhora: `Pausa - ${hour}:${minute}:${second}`
     }
+    requestPOST()
   }
   if(h1.textContent=="Volta"){
     console.log(`Volta - ${hour}:${minute}:${second}`) 
@@ -72,6 +74,7 @@ function registrar(){
       Hdata: pickData(),
       Hhora: `Volta - ${hour}:${minute}:${second}`
     }
+    requestPOST()
   }
   if(h1.textContent=="Saida"){
     console.log(`Saida - ${hour}:${minute}:${second}`) 
@@ -79,6 +82,7 @@ function registrar(){
       Hdata: pickData(),
       Hhora: `Saida - ${hour}:${minute}:${second}`
     }
+    requestPOST()
   }
   var dadosHistorico = JSON.stringify((historico))
   sessionStorage.setItem('chaveHistorico',dadosHistorico)
@@ -87,4 +91,18 @@ function registrar(){
   setTimeout(function(){
     window.location.href='home.html'
   },5000)
+}
+
+function requestPOST(){
+  var requestURL = 'http://localhost:3000/usuario'
+
+  var request = new XMLHttpRequest()
+
+  request.open('POST',requestURL)
+  request.responseType = 'json'
+
+  request.send()
+  request.onload = function(){
+      historico
+  }
 }

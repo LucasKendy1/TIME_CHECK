@@ -5,7 +5,17 @@
       "nome": "Lucas Kendy",
       "setor": "-",
       "cargo": "-",
-      "historico": []
+      "historico": [],
+      "gostoso": true
+    },
+    {
+      "id": 1
+    },
+    {
+      "id": 2
+    },
+    {
+      "id": 3
     }
   ]
 }
