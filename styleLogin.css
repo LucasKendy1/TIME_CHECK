@@ -91,6 +91,7 @@ span.material-symbols-outlined{
     font-size: 15pt;
     font-family: 'Poppins', sans-serif;
     color: white;
+    cursor: pointer;
 }
 a{
     color: white;

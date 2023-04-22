@@ -7,6 +7,8 @@ var seconds
 var hour
 var minute
 var second
+var dadosArquivados = JSON.parse(sessionStorage.getItem('chave'))
+var userName = dadosArquivados.nome
 //Função para criar e mostrar o relogio
 var getHours = () => {
   date = new Date()
@@ -88,32 +90,22 @@ function registrar(){
   sessionStorage.setItem('chaveHistorico',dadosHistorico)
   console.log(historico)
 
-  setTimeout(function(){
-    window.location.href='home.html'
-  },5000)
+  // setTimeout(function(){
+  //   window.location.href='home.html'
+  // },5000)
 }
 
 function requestPOST(){
-  /*  TENTATIVA MEIA FALHA DE UM REQUEST DE UM POST
-  var requestURL = 'http://localhost:3000/usuario'
-
-  var request = new XMLHttpRequest()
-
-  request.open('POST',requestURL)
-  request.responseType = 'json'
-
-  request.send()
-  request.onload = function(){
-      historico
-  }
-  */
-  fetch('http://localhost:3000/usuario', {
+  fetch('http://localhost:3000/horarios', {
     method: 'POST',
     headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
     },
-    body: JSON.stringify({ "horario": historico })
+    body: JSON.stringify({ 
+      "horario": historico,
+      "usuario": userName
+  })
   })
    .then(response => response.json())
    .then(response => console.log(JSON.stringify(response)))

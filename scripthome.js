@@ -168,5 +168,6 @@ function requestGET(){
 }
 
 function renderizarHistorico(objeto){
-    console.log(objeto)
+    
+
 }
