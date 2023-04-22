@@ -94,6 +94,7 @@ function registrar(){
 }
 
 function requestPOST(){
+  /*  TENTATIVA MEIA FALHA DE UM REQUEST DE UM POST
   var requestURL = 'http://localhost:3000/usuario'
 
   var request = new XMLHttpRequest()
@@ -105,4 +106,15 @@ function requestPOST(){
   request.onload = function(){
       historico
   }
+  */
+  fetch('http://localhost:3000/usuario', {
+    method: 'POST',
+    headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ "horario": historico })
+  })
+   .then(response => response.json())
+   .then(response => console.log(JSON.stringify(response)))
 }

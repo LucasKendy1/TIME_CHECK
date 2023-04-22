@@ -13,6 +13,7 @@ var h1 = document.querySelector('h1')
 var fotoPerfil = document.getElementById('idfoto')
 var dadosHistorico = JSON.parse(sessionStorage.getItem('chaveHistorico'))
 var body = document.querySelector('body')
+var divhistorico
 
 //Informações pessoais recebidas do login
 console.log(dadosArquivados)
@@ -21,15 +22,8 @@ console.log(dadosArquivados)
 console.log(dadosHistorico)
 
 var HistoricoCompleto 
-// var requestURL = "https://lucaskendy1.github.io/TIME_CHECK/historico.json"
-// var request = new XMLHttpRequest()
-// request.open('POST',requestURL,true)
-// request.send()
-// request.onreadystatechange = function(){
 
-// }
 
-// body.addEventListener('onload',pushHistorico)
 containerSlide.addEventListener('click',abrirHistorico)
 containerHistorico.addEventListener('click',abrirHistorico)
 containerMenu.addEventListener('click',abrirMenu)
@@ -47,11 +41,12 @@ function abrirHistorico(){
     if(containerH1.style.height=='85vh'){//se o historico tiver aberto, fecha
         containerH1.style.height='65px'
         containerSlide.style.transform='rotate(0deg)'
+        requestGET()
     }
     else{                                //se o historico tiver fechado, abre
         containerH1.style.height='85vh'
         containerSlide.style.transform='rotate(180deg)'
-        
+        requestGET()
     }
 }
 
@@ -142,4 +137,36 @@ function esconderSettings(){
 
 function sairConta(){
     window.location.href='./login.html'
+}
+
+
+function requestGET(){
+    if(containerH1.style.height=='85vh'){
+        var requestURL = 'http://localhost:3000/db'
+        var request = new XMLHttpRequest()
+        request.open('GET',requestURL)
+        request.responseType = 'json'
+        request.send()
+        request.onload = function(){
+            var jsonobj = request.response
+            console.log(jsonobj)
+            renderizarHistorico(jsonobj)
+        }
+        
+        divhistorico = document.createElement('div')
+        divhistorico.style.width='90%'
+        divhistorico.style.height='80%'
+        divhistorico.style.backgroundColor='gray'//tenho q tirar isso dps
+        containerH1.appendChild(divhistorico)
+        divhistorico.style.margin='auto'
+        divhistorico.style.marginTop='20px'
+        
+    }
+    else{
+        containerH1.removeChild(divhistorico)
+    }
+}
+
+function renderizarHistorico(objeto){
+    console.log(objeto)
 }

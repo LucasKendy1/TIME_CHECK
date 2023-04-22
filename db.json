@@ -1,21 +1,39 @@
 {
-  "usuario": [
+  "horarios": [
     {
-      "id": 0,
-      "nome": "Lucas Kendy",
-      "setor": "-",
-      "cargo": "-",
-      "historico": [],
-      "gostoso": true
-    },
-    {
+      "horario": {
+        "Hdata": "Dia: 22/Abril/2023",
+        "Hhora": "Entrada - 11:25:17"
+      },
       "id": 1
     },
     {
+      "horario": {
+        "Hdata": "Dia: 22/Abril/2023",
+        "Hhora": "Pausa - 11:25:40"
+      },
       "id": 2
     },
     {
+      "horario": {
+        "Hdata": "Dia: 22/Abril/2023",
+        "Hhora": "Volta - 11:25:48"
+      },
       "id": 3
+    },
+    {
+      "horario": {
+        "Hdata": "Dia: 22/Abril/2023",
+        "Hhora": "Saida - 11:25:52"
+      },
+      "id": 4
+    },
+    {
+      "horario": {
+        "Hdata": "Dia: 22/Abril/2023",
+        "Hhora": "Entrada - 11:48:07"
+      },
+      "id": 5
     }
   ]
 }
