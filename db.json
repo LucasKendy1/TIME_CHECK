@@ -103,6 +103,22 @@
       },
       "usuario": "Lucas Kendy",
       "id": 20
+    },
+    {
+      "horario": {
+        "Hdata": "Dia: 23/Abril/2023",
+        "Hhora": "Entrada - 13:15:44"
+      },
+      "usuario": "Lucas Kendy",
+      "id": 21
+    },
+    {
+      "horario": {
+        "Hdata": "Dia: 23/Abril/2023",
+        "Hhora": "Pausa - 13:16:14"
+      },
+      "usuario": "Lucas Kendy",
+      "id": 22
     }
   ]
 }

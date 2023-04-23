@@ -77,25 +77,72 @@ function abrirMenu(){
     containerAba.style.width='70vw'
 
     //---------criação dos bag do menu vertical--------------
+    var logoImagem = document.createElement('img')
+    logoImagem.setAttribute('src','./imagens/TIME_Check_white-removebg-preview.png')
+    logoImagem.setAttribute('width','200px')
+    containerAba.appendChild(logoImagem)
+
     var linkPerfil= document.createElement('p')
     linkPerfil.innerHTML='Perfil'
     linkPerfil.addEventListener('click',abrirHeader)
     containerAba.appendChild(linkPerfil)
+    linkPerfil.style.color='#F25044'
+    linkPerfil.style.fontSize='17pt'
+    linkPerfil.style.marginLeft='50px'
 
     var linkPontos= document.createElement('p')
     linkPontos.innerHTML='Meus Pontos'
     linkPontos.addEventListener('click',abrirHistorico)
     containerAba.appendChild(linkPontos)
+    linkPontos.style.color='#F25044'
+    linkPontos.style.fontSize='17pt'
+    linkPontos.style.marginLeft='50px'
 
     var linkChat= document.createElement('a')
     linkChat.setAttribute('href','https://chat.whatsapp.com/I71VfpsDMbZEd8pzaDO4qi')
-    linkChat.innerHTML='Link Chat'
+    linkChat.innerHTML='Chat RH<br>'
     containerAba.appendChild(linkChat)
+    linkChat.style.color='#F25044'
+    linkChat.style.fontSize='17pt'
+    linkChat.style.marginLeft='50px'
     
     var linkAjuda= document.createElement('a')
-    var configs= document.createElement('button')
-    var sairConta= document.createElement('button')
+    linkAjuda.innerHTML='Ajuda<br>'
+    linkAjuda.setAttribute('href','./ajuda.html')
+    containerAba.appendChild(linkAjuda)
+    linkAjuda.style.color='#F25044'
+    linkAjuda.style.fontSize='17pt'
+    linkAjuda.style.marginLeft='50px'
 
+    var configs= document.createElement('button')
+    configs.setAttribute('name','Configurações')
+    configs.innerHTML="Configurações"
+    containerAba.appendChild(configs)
+    configs.style.backgroundColor='#f8deb5'
+    configs.style.border='none'
+    configs.style.color='#F25044'
+    configs.style.fontSize='17pt'
+    configs.style.marginLeft='50px'
+
+    var sairConta = document.createElement('button')
+    sairConta.addEventListener('click',sairdaConta)
+    sairConta.innerHTML="Sair da conta"
+    containerAba.appendChild(sairConta)
+    sairConta.style.backgroundColor='#f25044'
+    sairConta.style.color='white'
+    sairConta.style.fontSize='17pt'
+    sairConta.style.marginLeft='50px'
+    sairConta.style.width='80%'
+    sairConta.style.height='60px'
+    sairConta.style.border='none'
+    sairConta.style.borderRadius='10px'
+    sairConta.style.position='relative'
+    sairConta.style.marginTop='200px'
+
+}
+
+function sairdaConta(){
+    window.location.href('./login.html')
 }
 
 function fecharMenu(){
