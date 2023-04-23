@@ -138,11 +138,12 @@ function abrirMenu(){
     sairConta.style.borderRadius='10px'
     sairConta.style.position='relative'
     sairConta.style.marginTop='200px'
+    sairConta.style.cursor='pointer'
 
 }
 
 function sairdaConta(){
-    window.location.href('./login.html')
+    window.location.href='./login.html'
 }
 
 function fecharMenu(){
