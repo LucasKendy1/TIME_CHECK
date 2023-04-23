@@ -49,16 +49,60 @@ function abrirHistorico(){
         requestGET()
     }
 }
-
+var containerAba
+var containerClose
 function abrirMenu(){
-    var containerAba = document.createElement('div')
-    containerAba.setAttribute('id','aba')
-    containerMain.appendChild(containerAba)
-    containerAba.style.width='80%'
-    containerAba.style.height='100%'
+    containerAba = document.createElement('div')
+    containerClose = document.createElement('div')
+    containerAba.style.transition='1s'
+    containerClose.style.transition='1s'
+    containerAba.style.display='block'
+    containerClose.style.display='block'
+    containerAba.style.width='10vw'
+    containerAba.style.height='94.5vh'
     containerAba.style.backgroundColor='white'
-    containerAba.innerHTML=`aaaa`
+    containerAba.style.position='absolute'
+    containerAba.style.top='0px'
+    containerAba.style.backgroundColor='#f8deb5'
+    containerClose.style.width='30vw'
+    containerClose.style.height='94.5vh'
+    containerClose.style.backgroundColor='white'
+    containerClose.style.position='absolute'
+    containerClose.style.top='0px'
+    containerClose.style.left='70vw'
+    containerClose.style.backgroundColor='#30526a7e'
+    containerClose.addEventListener('click',fecharMenu)
+    main.appendChild(containerAba)
+    main.appendChild(containerClose)
+    containerAba.style.width='70vw'
+
+    //---------criação dos bag do menu vertical--------------
+    var linkPerfil= document.createElement('p')
+    linkPerfil.innerHTML='Perfil'
+    linkPerfil.addEventListener('click',abrirHeader)
+    containerAba.appendChild(linkPerfil)
+
+    var linkPontos= document.createElement('p')
+    linkPontos.innerHTML='Meus Pontos'
+    linkPontos.addEventListener('click',abrirHistorico)
+    containerAba.appendChild(linkPontos)
+
+    var linkChat= document.createElement('a')
+    linkChat.setAttribute('href','https://chat.whatsapp.com/I71VfpsDMbZEd8pzaDO4qi')
+    linkChat.innerHTML='Link Chat'
+    containerAba.appendChild(linkChat)
+    
+    var linkAjuda= document.createElement('a')
+    var configs= document.createElement('button')
+    var sairConta= document.createElement('button')
+
 }
+
+function fecharMenu(){
+    containerAba.style.display='none'
+    containerClose.style.display='none'
+}
+
 
 function abrirHeader(){
     header.style.transition='1s'
@@ -156,11 +200,11 @@ function requestGET(){
         divhistorico = document.createElement('div')
         divhistorico.style.width='90%'
         divhistorico.style.height='80%'
-        divhistorico.style.backgroundColor='gray'//tenho q tirar isso dps
+        
         containerH1.appendChild(divhistorico)
         divhistorico.style.margin='auto'
         divhistorico.style.marginTop='20px'
-        
+        divhistorico.style.overflowY='scroll'
     }
     else{
         containerH1.removeChild(divhistorico)
@@ -168,6 +212,46 @@ function requestGET(){
 }
 
 function renderizarHistorico(objeto){
-    
+    console.log((objeto.horarios).length)   //tamanho do array do historico
+    //fazer um for (var i; i<(objeto.horarios).length; i++){
+    //  para cada bracket, se o user(historico) for igual a user(home) criar filhos em forma de cards
+    //}
+    console.log(objeto.horarios[0])
+     //trocar por i
 
+    // console.log(printAtual.usuario)
+    // console.log(dadosArquivados.nome)
+    var printAtual
+    for(var i=0; i<(objeto.horarios).length; i++){  //tamanho max do historico      //ver se é menor ou menor igual
+        printAtual = objeto.horarios[i]
+        if(printAtual.usuario==dadosArquivados.nome){   //se o user do registro for igual ao user logado faça: 
+            // alert('deu certo')
+            // console.log(objeto.horarios[i])
+            // printAtual = objeto.horarios[i]
+            console.log(printAtual.horario.Hdata)
+            console.log(printAtual.horario.Hhora) 
+            //agr tenho q criar filhos para alocar esses dados dentro da divhistorico
+            var boxHorarios = document.createElement('div')//caixinha pra deixar bunitu
+            
+            boxHorarios.style.border='5px solid #f25044'
+            boxHorarios.style.width='98%'
+            boxHorarios.style.height='90px'
+            boxHorarios.style.marginTop='20px'
+            boxHorarios.style.backgroundColor="#feb06a" 
+            boxHorarios.style.color='#875f3b'
+            boxHorarios.style.fontWeight='800'
+            boxHorarios.style.display='flex'
+            boxHorarios.style.justifyContent='center'
+            boxHorarios.style.alignItems='center'
+            boxHorarios.style.flexDirection='column'
+            var containerPrintData = document.createElement('p')
+            var containerPrintHora = document.createElement('p')
+            containerPrintData.innerHTML = printAtual.horario.Hdata
+            containerPrintHora.innerHTML = printAtual.horario.Hhora
+            boxHorarios.appendChild(containerPrintData)
+            boxHorarios.appendChild(containerPrintHora)
+            divhistorico.appendChild(boxHorarios)
+            
+        }
+    }
 }
