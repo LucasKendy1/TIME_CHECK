@@ -178,7 +178,7 @@ function abrirHeader(){
         main.style.display='none'
         h2.innerHTML='Ola!'
         h1.style.marginTop='50px'
-        h1.style.transform='translateX(-10vw)'
+        h1.style.transform='translaeX(-10vw)'
         header.style.padding='45px'
         fotoPerfil.style.width='200px'
         fotoPerfil.style.height='200px'
@@ -193,34 +193,67 @@ function carregarSettings(){
     // section.innerHTML=dadosArquivados.email
     // section.innerHTML+=dadosArquivados.setor
     // section.innerHTML+=dadosArquivados.cargo
-    let h3email= document.createElement('h3')
-    let h3setor= document.createElement('h3')
-    let h3cargo= document.createElement('h3')
-    h3email.innerHTML="Email: " + dadosArquivados.email
-    h3setor.innerHTML="Setor: " + dadosArquivados.setor
-    h3cargo.innerHTML="Cargo: " + dadosArquivados.cargo
+
+    //Hierarquia do DOM da apresentação dos dados
+    for(var i=0; i<=2; i++){
+        let containerDados = document.createElement('div')
+        section.appendChild(containerDados)
+        containerDados.setAttribute('class','containerDados')
+        let containerLabel = document.createElement('div')
+        containerDados.appendChild(containerLabel)
+        containerLabel.setAttribute('class','containerLabel')
+        let containerInfo = document.createElement('div')
+        containerDados.appendChild(containerInfo)
+        containerInfo.setAttribute('class','containerInfo')
+        if(i==0){
+            containerLabel.innerHTML = 'E-mail'
+            containerInfo.innerHTML = dadosArquivados.email
+        }
+        if(i==1){
+            containerLabel.innerHTML = 'Setor'
+            containerInfo.innerHTML = dadosArquivados.setor
+        }
+        if(i==2){
+            containerLabel.innerHTML = 'Cargo'
+            containerInfo.innerHTML = dadosArquivados.cargo
+        }
+    }
+
     header.appendChild(section)
-    section.appendChild(h3email)
-    section.appendChild(h3setor)
-    section.appendChild(h3cargo)
+
+    //Apresentação dos dados - Estilização no css (usei a cabeça aqui hihi)
+    
+    
     section.style.position='absolute'
     section.style.width='350px'
     section.style.height='200px'
-    section.style.marginTop='50%'
-    var botaoSair= document.createElement('input')
-    botaoSair.setAttribute('type', 'button')
-    botaoSair.setAttribute('value','Sair da conta')
+    section.style.marginTop='30vh'
+    section.style.marginLeft='50%'
+    section.style.transform='translateX(-70%)'
+    var botaoSair= document.createElement('div')
+    botaoSair.innerHTML='Sair da conta'
     botaoSair.addEventListener('click',sairConta)
     header.appendChild(botaoSair)
-    botaoSair.style.width='200px'
-    botaoSair.style.height='40px'
+    botaoSair.style.width='300px'
+    botaoSair.style.height='60px'
     botaoSair.style.border='none'
-    botaoSair.style.borderRadius='40px'
+    botaoSair.style.borderRadius='10px'
     botaoSair.style.backgroundColor='#f25044'
     botaoSair.style.color='white'
+    botaoSair.style.fontSize='17pt'
     botaoSair.style.position='absolute'
-    botaoSair.style.marginTop='80%'
+    botaoSair.style.marginTop='60vh'
+    botaoSair.style.marginLeft='50%'
+    botaoSair.style.transform='translateX(-60%)'
+    botaoSair.style.display='flex'
+    botaoSair.style.justifyContent='space-around'
+    botaoSair.style.alignItems='center'
     botaoSair.style.cursor='pointer'
+    var spanLogout = document.createElement('span')
+    spanLogout.setAttribute('class','material-symbols-outlined')
+    spanLogout.textContent="Logout"
+    botaoSair.appendChild(spanLogout)
+    
 }
 
 function esconderSettings(){

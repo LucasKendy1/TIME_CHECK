@@ -133,3 +133,34 @@ a{
 #idfoto{
     transition: 1s ease;
 }
+.containerDados{
+    width: 350px;
+    height: 50px;
+    /* background-color: #f25044; */
+    display: flex;
+    border-bottom: 2px solid #FEB06A;
+    margin-bottom: 30px;
+}
+
+.containerLabel{
+    width: 80px;
+    height: 50px;
+    /* background-color: #53f244; */
+    border-right: 1px solid #FEB06A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FEB06A;
+    font-size: large;
+}
+
+.containerInfo{
+    width: 300px;
+    height: 50px;
+    /* background-color: #6a44f2; */
+    border-left: 1px solid #FEB06A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+}
