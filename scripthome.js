@@ -242,7 +242,7 @@ function carregarSettings(){
     botaoSair.style.color='white'
     botaoSair.style.fontSize='17pt'
     botaoSair.style.position='absolute'
-    botaoSair.style.marginTop='60vh'
+    botaoSair.style.marginTop='70vh'
     botaoSair.style.marginLeft='50%'
     botaoSair.style.transform='translateX(-60%)'
     botaoSair.style.display='flex'
