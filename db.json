@@ -135,6 +135,54 @@
       },
       "usuario": "Lucas Kendy",
       "id": 24
+    },
+    {
+      "horario": {
+        "Hdata": "Dia: 25/Abril/2023",
+        "Hhora": "Entrada - 18:42:20"
+      },
+      "usuario": "Lucas Kendy",
+      "id": 25
+    },
+    {
+      "horario": {
+        "Hdata": "Dia: 25/Abril/2023",
+        "Hhora": "Pausa - 18:42:41"
+      },
+      "usuario": "Lucas Kendy",
+      "id": 26
+    },
+    {
+      "horario": {
+        "Hdata": "Dia: 25/Abril/2023",
+        "Hhora": "Entrada - 18:45:06"
+      },
+      "usuario": "Lucas Kendy",
+      "id": 27
+    },
+    {
+      "horario": {
+        "Hdata": "Dia: 25/Abril/2023",
+        "Hhora": "Entrada - 18:50:44"
+      },
+      "usuario": "Livia Gabriele",
+      "id": 28
+    },
+    {
+      "horario": {
+        "Hdata": "Dia: 25/Abril/2023",
+        "Hhora": "Entrada - 20:04:29"
+      },
+      "usuario": "Lucas Kendy",
+      "id": 29
+    },
+    {
+      "horario": {
+        "Hdata": "Dia: 25/Abril/2023",
+        "Hhora": "Pausa - 20:08:19"
+      },
+      "usuario": "Lucas Kendy",
+      "id": 30
     }
   ]
 }
