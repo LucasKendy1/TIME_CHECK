@@ -16,6 +16,7 @@ var body = document.querySelector('body')
 var divhistorico
 fotoPerfil.setAttribute('src',dadosArquivados.foto)
 console.log(dadosArquivados.foto)
+
 //Informações pessoais recebidas do login
 console.log(dadosArquivados)
 
