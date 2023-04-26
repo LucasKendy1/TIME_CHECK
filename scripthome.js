@@ -14,8 +14,6 @@ var fotoPerfil = document.getElementById('idfoto')
 var dadosHistorico = JSON.parse(sessionStorage.getItem('chaveHistorico'))
 var body = document.querySelector('body')
 var divhistorico
-fotoPerfil.setAttribute('src',dadosArquivados.foto)
-console.log(dadosArquivados.foto)
 
 //Informações pessoais recebidas do login
 console.log(dadosArquivados)
