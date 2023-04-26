@@ -119,6 +119,38 @@
       },
       "usuario": "Lucas Kendy",
       "id": 22
+    },
+    {
+      "horario": {
+        "Hdata": "Dia: 24/Abril/2023",
+        "Hhora": "Entrada - 14:43:33"
+      },
+      "usuario": "Lucas Kendy",
+      "id": 23
+    },
+    {
+      "horario": {
+        "Hdata": "Dia: 24/Abril/2023",
+        "Hhora": "Pausa - 14:43:41"
+      },
+      "usuario": "Lucas Kendy",
+      "id": 24
+    },
+    {
+      "horario": {
+        "Hdata": "Dia: 24/Abril/2023",
+        "Hhora": "Volta - 14:43:51"
+      },
+      "usuario": "Lucas Kendy",
+      "id": 25
+    },
+    {
+      "horario": {
+        "Hdata": "Dia: 24/Abril/2023",
+        "Hhora": "Saida - 14:43:58"
+      },
+      "usuario": "Lucas Kendy",
+      "id": 26
     }
   ]
 }
