@@ -46,6 +46,7 @@ function verificarCredenciais(objeto){
             }
             else{
                 console.log('senha invalida')
+                //aviso de senha incorreta
             }
         }
         else{
