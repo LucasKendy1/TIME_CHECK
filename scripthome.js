@@ -14,6 +14,9 @@ var fotoPerfil = document.getElementById('idfoto')
 var dadosHistorico = JSON.parse(sessionStorage.getItem('chaveHistorico'))
 var body = document.querySelector('body')
 var divhistorico
+var foto = dadosArquivados.foto
+fotoPerfil.setAttribute('src',foto)
+console.log(foto)
 
 //Informações pessoais recebidas do login
 console.log(dadosArquivados)
@@ -190,6 +193,7 @@ var section
 function carregarSettings(){
     section = document.createElement('section')
     section.setAttribute('id','sectionDados')
+    
     // section.innerHTML=dadosArquivados.email
     // section.innerHTML+=dadosArquivados.setor
     // section.innerHTML+=dadosArquivados.cargo
