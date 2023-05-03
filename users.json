@@ -5,7 +5,8 @@
             "email" : "lucaskendy2002@gmail.com",
             "senha" : "123123",
             "setor" : "desenvolvimento",
-            "cargo" : "lkjhgfds"
+            "cargo" : "lkjhgfds",
+            "foto" : "",
         },
         {
             "nome" : "Livia Gabriele",
